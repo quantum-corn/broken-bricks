@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <!--TODO change author, title-->
+        <!--TODO change author, title, etc.-->
         <meta name="author" content="quantum-corn">
         <meta name="keywords" content="science, tech, blog">
         <meta name="description" content="Science and Tech Blog">
@@ -13,7 +13,8 @@
         <style>
             @import "./styles/layout.css";
         </style>
-        
+        <link rel="stylesheet" href="./styles/display.css">
+        <link rel="stylesheet" href="./styles/visual.css">
         <link rel="stylesheet" href="./styles/light_theme.css" id="theme_style">
     </head>
     
@@ -21,22 +22,40 @@
         <header>     
             <!--TODO change the heading-->
             <h1>Quantum Corn</h1>
-            <!--TODO above here is the header-->
-            <hr>
+            
+            <nav>
+                <ul>
+                    <li class="about">Meet me</li>
+                    <li class="blogs">Blogs</li>
+                    <li class="contact">Reach me</li>
+                </ul>
+            </nav>
+
+            <ion-icon name="moon" id="theme_icon"></ion-icon>
         </header>
         
-        <!--TODO Main content-->
-        <ion-icon name="hourglass-outline"></ion-icon>
-        <ion-icon name="moon-outline" id="theme_icon"></ion-icon>
-        
-        <footer>
-            <hr>
-            <!--TODO Footer goes below here-->
-        </footer>
 
-        <!--TODO Scripts go here-->
+        <div id="content_box">
+            <div class="about">
+                <p>Hello World!</p>
+            </div>
+
+            <div class="blogs">
+                <ul >
+                    <li>Hackers Love Unicorns and Magic</li>
+                    <li>Reasonably Unreasonable</li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <a href="https://www.github.com/quantum-corn/"><ion-icon name="logo-github"></ion-icon>GitHub</a>
+            </div>
+        </div>
+
+
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script src="./scripts/theme.js"></script>
+        <script src="./scripts/nav.js"></script>
     </body>
 </html>

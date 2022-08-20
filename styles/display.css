@@ -1,0 +1,7 @@
+#content_box>div {
+    display:none;
+}
+
+#content_box>div#current_cont {
+    display:block; 
+}

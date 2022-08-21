@@ -2,7 +2,8 @@
 
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" lang="en-US">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--TODO change author, title, etc.-->
         <meta name="author" content="quantum-corn">
         <meta name="keywords" content="science, tech, blog">
@@ -10,52 +11,48 @@
 
         <title>Quantum Corn</title>
 
-        <style>
-            @import "./styles/layout.css";
-        </style>
-        <link rel="stylesheet" href="./styles/display.css">
+        <link rel="stylesheet" href="./styles/layout.css">
         <link rel="stylesheet" href="./styles/visual.css">
         <link rel="stylesheet" href="./styles/light_theme.css" id="theme_style">
     </head>
     
     <body>
-        <header>     
+        <header role="banner">     
             <!--TODO change the heading-->
             <h1>Quantum Corn</h1>
             
-            <nav>
+            <nav role="navigation">
                 <ul>
-                    <li class="about">Meet me</li>
-                    <li class="blogs">Blogs</li>
-                    <li class="contact">Reach me</li>
+                    <li class="home" accesskey="H" tabindex="1" translate="yes">Home</li>
+                    <li class="blogs" accesskey="B" tabindex="2" translate="yes">Blogs</li>
+                    <li class="author" accesskey="A" tabindex="3" translate="yes">Author</li>
                 </ul>
             </nav>
 
-            <ion-icon name="moon" id="theme_icon"></ion-icon>
+            <ion-icon name="moon" id="theme_icon" accesskey="T" tabindex="4"></ion-icon>
         </header>
         
 
-        <div id="content_box">
-            <div class="about">
+        <div id="content_box" spellcheck="true" translate="yes">
+            <main class="home">
                 <p>Hello World!</p>
-            </div>
+            </main>
 
-            <div class="blogs">
+            <main class="blogs">
                 <ul >
                     <li>Hackers Love Unicorns and Magic</li>
                     <li>Reasonably Unreasonable</li>
                 </ul>
-            </div>
+            </main>
 
-            <div class="contact">
-                <a href="https://www.github.com/quantum-corn/"><ion-icon name="logo-github"></ion-icon>GitHub</a>
-            </div>
+            <main class="author">
+                <a href="https://www.github.com/quantum-corn/"><ion-icon name="logo-github" accesskey="G" tabindex="5"></ion-icon>GitHub</a>
+            </main>
         </div>
 
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <script src="./scripts/theme.js"></script>
-        <script src="./scripts/nav.js"></script>
+        <script src="./scripts/tools.js"></script>
+        <script src="./scripts/setup.js"></script>
     </body>
 </html>

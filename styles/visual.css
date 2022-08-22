@@ -1,40 +1,14 @@
-html {
-    font-size: 125%;
-}
-
 body {
     font-family: sans-serif;
 }
 
-header {
-    background-image: linear-gradient(to bottom, hsla(265, 50%, 35%, 1), hsla(265, 50%, 35%, .95), hsla(265, 50%, 35%, .85), hsla(265, 50%, 35%, .7), hsla(265, 50%, 35%, .5), hsla(265, 50%, 35%, 0));
-}
-
-header h1 {
-    font-size: 4.2rem;
-}
-
-#content_box {
-    border-bottom: solid 2px slategray;
-    border-radius: 0% 0% 2% 2% / 0% 0% 5% 5%;
-}
-
 #theme_icon {
-    font-size: 1.75rem;
     border-radius: 10%;
     border: solid 2px slategray;
 }
 
 nav li {
-    border-bottom: solid 2px dimgray;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-nav li#current_tab {
-    border-radius: 10% 10% 0% 0% / 40% 40% 0% 0%;
-    border: solid 2px dimgray;
-    border-bottom: none;
+    border-right: solid 1px dimgray;
 }
 
 #content_box>main {
@@ -43,4 +17,67 @@ nav li#current_tab {
 
 #content_box>main#current_cont {
     display:block; 
+}
+
+#content_box {
+    font-size: 200%;
+}
+
+@media screen and (max-width: 149px) {
+    * {
+        letter-spacing: 50%;
+        word-spacing: 50%;
+    }
+    
+    #theme_icon {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 449px) {
+    * {
+        line-height: 90%;
+    }
+}
+
+@media screen and (max-width: 339px), (max-height: 449px) {
+    header {
+        background-color: hsla(270, 60%, 60%, 1);
+    }
+}
+
+@media screen and (min-width: 150px){
+     nav, #theme_icon {
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width: 339px), (max-height: 449px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media screen and (min-width: 340px) and (min-height: 450px) {
+    header {
+        background-image: linear-gradient(to bottom, hsla(265, 50%, 35%, 1), hsla(265, 50%, 35%, .95), hsla(265, 50%, 35%, .85), hsla(265, 50%, 35%, .7), hsla(265, 50%, 35%, .5), hsla(265, 50%, 35%, 0));
+    }
+    
+    #content_box {
+        font-size: 100%;
+        border-bottom: solid 2px slategray;
+        border-radius: 0% 0% 2% 2% / 0% 0% 5% 5%;
+    }
+
+    nav li {
+        border-right: 0;
+        border-bottom: solid 2px dimgray;
+        font-weight: bold;
+    }
+
+    nav li#current_tab {
+        border-radius: 10% 10% 0% 0% / 40% 40% 0% 0%;
+        border: solid 2px dimgray;
+        border-bottom: none;
+    }
 }

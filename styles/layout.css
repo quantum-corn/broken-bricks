@@ -19,6 +19,7 @@ nav li {
 
 header {
     width: 100vw;
+    z-index: 100;
 }
 
 #content_box {

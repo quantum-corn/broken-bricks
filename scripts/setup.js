@@ -5,6 +5,4 @@ function setup() {
     buttons[0].id = "current_tab";
     contents[0].id = "current_cont";
 }
-
-
 setup();

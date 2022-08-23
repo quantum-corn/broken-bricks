@@ -58,6 +58,7 @@ header {
         top: 38vh;
         left: 14vw;
         margin: 0 5vw 5vh 0;
+        padding: 2vmin 2vmin;
         width: 81vw;
     }
 }

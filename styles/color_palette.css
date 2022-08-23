@@ -1,0 +1,15 @@
+li:hover, li:active, ion-icon:hover, ion-icon:active {
+    background-color: hsla(310, 40%, 45%, 1);
+}
+
+@media screen and (max-width: 299px), (max-height: 449px) {
+    header {
+        background-color: hsla(270, 60%, 60%, 1);
+    }
+}
+
+@media screen and (min-width: 300px) and (min-height: 450px) {
+    header {
+        background-image: linear-gradient(to bottom, hsla(265, 50%, 35%, 1), hsla(265, 50%, 35%, .95), hsla(265, 50%, 35%, .85), hsla(265, 50%, 35%, .7), hsla(265, 50%, 35%, .5), hsla(265, 50%, 35%, 0));
+    }   
+}

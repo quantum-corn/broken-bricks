@@ -28,17 +28,17 @@ header {
 
 @media screen and (min-width: 300px) and (min-height: 450px) {
     header {
-        height: 38vh;
+        height: 33vh;
         position: fixed;
     }
 
     header h1 {
         padding-left: 2.5vw;
-        margin-top: 14vh;
+        margin-top: 11vh;
     }
     
     nav {
-        width: 62vw;
+        width: 66vw;
         height: 5vh;
         padding: 0 14vw;
         padding-right: 0;
@@ -46,7 +46,7 @@ header {
     
     #theme_icon {
         padding: .4vh .5vw;
-        margin: .5vh 5vw;
+        margin: .5vh 4vw;
     }
     
     nav li {
@@ -54,12 +54,12 @@ header {
     }
     
     #content_box {
-        height: 57vh;
+        height: 62.5vh;
         position: fixed;
-        top: 38vh;
+        top: 33vh;
         left: 14vw;
-        margin: 0 5vw 5vh 0;
+        margin: .5vh 2.5vw 4vh 0;
         padding: 2vmin 2vmin;
-        width: 81vw;
+        width: 83.5vw;
     }
 }

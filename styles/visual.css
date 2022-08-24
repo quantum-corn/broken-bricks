@@ -1,5 +1,5 @@
 header {
-    border-radius: 0% 0% 4% 4% / 0% 0% 10% 10%;
+    border-radius: 0% 0% 1.5% 1.5% / 0% 0% 5% 5%;
 }
 
 ion-icon {
@@ -40,10 +40,6 @@ a {
     html {
         font-size: 130%;
     }
-
-    header {
-        box-shadow: 0 0 2vmin 0 dimgray;
-    }
     
     #content_box {
         font-size: 75%;
@@ -52,23 +48,17 @@ a {
     
     nav li {
         font-weight: bold;
-        box-shadow: .3vmin .2vmin .3vmin 0 dimgray;
-
+        border-radius: 5% 5% 0% 0% / 20% 20% 0% 0%;
     }
     
-    nav li#current_tab {
+    #current_tab {
         border-radius: 10% 10% 0% 0% / 40% 40% 0% 0%;
         border: solid 1px dimgray;
         border-bottom: none;
-        box-shadow: 0 -.5vmin .3vmin .3vmin dimgray;
-    }
-
-    ion-icon, #content_box{
-        box-shadow: .3vmin .3vmin .3vmin 0 dimgray;
     }
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 1150px) {
     header {
         font-size: 175%;
     }

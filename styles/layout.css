@@ -61,5 +61,6 @@ header {
         margin: .5vh 2.5vw 4vh 0;
         padding: 2vmin 2vmin;
         width: 83.5vw;
+        overflow: auto;
     }
 }

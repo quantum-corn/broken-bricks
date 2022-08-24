@@ -7,10 +7,11 @@
 nav, #theme_icon {
     position: absolute;
     bottom: 1vh;
+    left: 5vw;
 }
 
 #theme_icon {
-    right: 0;
+    right: 5vw;
 }
 
 nav li {
@@ -42,11 +43,13 @@ header {
         height: 5vh;
         padding: 0 14vw;
         padding-right: 0;
+        left: 0;
     }
     
     #theme_icon {
         padding: .4vh .5vw;
         margin: .5vh 4vw;
+        right: 0;
     }
     
     nav li {
@@ -54,12 +57,12 @@ header {
     }
     
     #content_box {
-        height: 62.5vh;
+        height: 61.5vh;
         position: fixed;
         top: 33vh;
         left: 14vw;
-        margin: .5vh 2.5vw 4vh 0;
-        padding: 2vmin 2vmin;
+        margin: .5vh 2.5vw 5vh 0;
+        padding: 2.5vmin 2vmin;
         width: 83.5vw;
         overflow: auto;
     }

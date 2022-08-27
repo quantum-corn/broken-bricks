@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" lang="en-US">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--TODO change author, title, etc.-->
+        <meta name="author" content="quantum-corn">
+        <meta name="keywords" content="computer, programming, coding, python, modules">
+        <meta name="description" content="Python Modules Learning Blog">
+
+        <title>Snake Charmer</title>
+
+        <link rel="stylesheet" href="../../styles/reading_mode.css">
+        <link rel="stylesheet" href="../../styles/fonts.css">
+        <link rel="stylesheet" href="../../styles/animations.css">
+        <link rel="stylesheet" href="../../styles/light_theme.css" id="theme_style">
+    </head>
+    
+    <body>
+        <header role="banner">     
+            <!--TODO change the heading-->
+            <h1>Snake Charmer</h1>
+            <h2>Modules - Issue I</h2>
+            
+            <ion-icon name="arrow-back" id="back_icon" accesskey="B" tabindex="1"></ion-icon>
+            <ion-icon name="moon" id="theme_icon" accesskey="T" tabindex="2"></ion-icon>
+        </header>
+        
+
+        <div id="content_box" spellcheck="true" translate="yes">
+            <section id="intro">
+                <h3>Introduction</h3>
+                <p>
+                    Hello there! So we have come a long way on our journey to learning <b>Python</b>. At this point I will assume knowledge about the basics of the language and if you come across something that you do not know, you'll be able to figure it out with some resource or Google or something. Now we will look at an aspect of Python called <b>modules</b>.
+                </p>
+            </section>
+
+            <section id="modules">
+                <h3>Modules</h3>
+                <p>
+                    <div class="highlight">Think of modules like plug-in features.</div>
+                    The basic language that we have learned so far is only the basic structures required to make a programming language. Think of a simple task that doesn't come built-in with the language, like picking a number out of a set or a range of values. It's common enough for a lot of people to need but not an elementary structural unit of the language. So someone decides to code it. Now everyone writing the code is a waste of time and effort. So the person who wrote the code decides to make their code available to the public. Now everyone can reuse the code. But copy pasting is inefficient in code, as we can all agree, so to easen up this process of reusing already written code, the concept of module was created. Think of plugging in the code  wherever you need and being able use the features of it seamlessly.
+                </p>
+            </section>
+
+            <section id="access">
+                <h3>Accessing the Module</h3>
+                <p>
+                    <div class="highlight">Every module has a name.</div>
+                    This might seem obvious but just like variables it is a case-sensitive, unique name, so we need to be exact about it. The random module is called <code>random</code>.
+                    <div class="highlight">To use a module, the original source code of it must be there on the machine on which the code is to run.</div>
+                    Again it might seem obvious, but quite often while we try to run our code on a friend's machine, it doesn't work, and we waste time trying to fix the code only realize later that, it was a matter of module availability. <code>random</code> come with Python by default, but others you need to install manually. Installation instruction can almost always be found at the module's website and documentation, or just plain Google it up. Most often we use something called package managers to install and manage pacakges which contain modules (for the time being, just keep it simple package = modules). Python has it's own package manager called <code>pip</code>. I will probably write a separate blog on <code>pip</code>, so I will no digress into it here. Now that we have our module let's see how to use it in our code. The first step is importing it in our code, which just a nerdy way of saying, 'Let's plug it in!''
+                    <div class="highlight">(Advanced)<br>
+                        Another thing to take care of, is that the module source code is at a location where Python is going to look for it. Usually this means the locations on the <code>$PATH</code> global variable of the operating system. This usually isn't a worry because modules installed via <code>pip</code>, which is where we get most of our modules, go to a location which Python stores on <code>$PATH</code> when Python is installed. This becomes a thing to look out for when we are playing around with our own module or something we got from somewhere other than a package manager, like <code>pip</code>. One way to simplify such situations is to use the full path of the module source code when we import the module into our code.</div>
+                    Importing is done by the keyword <code>import</code>. At this point I must digress a little and talk about the structure of modules. Just how files are structured inside a directory, with subdirectories, modules may have submodules, and you can import only submodules instead of the whole module, using keyword <code>from</code>, or the dot operator, which is a matter of object orientation and needs not be worried about at this stage. This is what you should do as often as possible to keep your code slim and trim. It's just more efficient. Also while importing a module we can give it an alias using keyword <code>as</code>, which is just a nerdy way of saying nickname.
+                    <div class="highlight">
+                        <code>
+                            import random
+                            <hr>
+                            import random as ran
+                            <hr>
+                            from matplotlib import pylot
+                            <hr>
+                            from matplotlib import pyplot as plt
+                            <hr>
+                            import matplotlib.pyplot
+                            <hr>
+                            import matplotlib.pyplot as plt
+                        </code>
+                    </div>
+                    The first case os importing module called <code>random</code>. The second case does the same but also gives it the alias (nickname) <code>ran</code> (we will see later why this matters). The third and fifth cases imports a submodule <code>pyplot</code> from a module <code>matplotlib</code> which is a module to create plots and graphs using different ways. The fourth and sixth cases, as you can guess, do the same but also give the submodule a nickname <code>plt</code>.
+                </p>
+            </section>
+            <section id="using">
+                <h3>Using Modules</h3>
+                <p>
+                    I'll start with a simple idea. Any module can only provide 2 kinds of features to your code.
+                    <div class="highlight">
+                        <ul>
+                            <li>Data</li>
+                            <li>Functions</li>
+                        </ul>
+                    </div>
+                    We need to know the exact variable name in which the data want to access is stored inside the module, or the name of the function we want to use in our code. This is part that involves learning how to use a certain module. And it is not hard. And as always Google is always there to help. Let us look at some examples.<br>
+                    <code>
+                        >>> import random<br>
+                        >>> rng=random.Random()<br>
+                        >>> # This line was technically a class instance creation, as the Random() is used. And it's an established tradition to start constructor names with capital letters. Constructors are special functions used to create copies of classes. But this is a matter of Object Orientation.<br>
+                        >>> # For now just think of it as a box from which yo ucan pull out random numbers.<br>
+                        >>> rng.randrange(1,7)<br>
+                        2<br>
+                        >>> rng.randrange(1,7)<br>
+                        5<br>
+                        >>> rng.random()<br>
+                        0.47788220195260545<br>
+                        >>> rng.random()<br>
+                        0.6594531447371549<br>
+                        >>> import math<br>
+                        >>> math.pi<br>
+                        3.141592653589793<br>
+                        >>> math.e<br>
+                        2.718281828459045<br>
+                        >>> math.sqrt(4.0)<br>
+                        2.0<br>
+                    </code>
+                    <div class="highlight">
+                        Notice how sometimes parenthesis is used and sometimes not. We know we use parenthesis for functions. So this explain how sometimes we are using functions to get our job done eg. <code>rng.random()</code>, and sometimes, we use plain data, eg. <code>math.pi</code>.
+                    </div>
+                    Notice how the module name is used before every use of a data or function of that module. This is a way to tell the system, for example, 'get the value of the variable <code>pi</code> from the source code of the <code>math</code> module', or 'use a function called <code>sqrt()</code> the definition of which is in the source code of the <code>math</code> module'. But then another question that presents itself is why was <code>rng.random()</code> used instead of the module name. The answer again is Object Orientation. That one line where we created a copy of the class <code>random</code>, via <code>Random()</code>. SO now instead of accessing the original source code we are accessing the copy that we named <code>rng</code>. These copies are called objects. It is one of the many magical things that Object Orientation lets us do. Now let us look at some examples using aliases.<br>
+                    <code>
+                        >>> import math as m<br>
+                        >>> math.sin(math.pi)<br><br>
+                        Traceback (most recent call last):<br>
+                        File "&lt;stdin&gt;", line 1, in &lt;module&gt;<br>
+                        NameError: name 'math' is not defined<br>
+                        >>> m.sin(m.pi)<br>
+                        1.2246467991473532e-16
+                    </code>
+                    <div class="highlight>">
+                        Also do notice well that creating object and aliasing a module are not the same thing deep down.
+                    </div>
+                    Obviously, I haven't even scratched the surface of the capabilities of the modules I used. But my point here was to demonstrate the use of use of modules, the modules themselves can be explored in depth in some other session.
+                </p>
+            </section>
+            <section id="special">
+                <h3>Special cases</h3>
+                <p>Now let us look at 2 special scenarios.</p>
+                <ul>
+                    <li>
+                        <p>
+                            We can import all the subelements of a module by using the * shortcut, eg. <code> from math import *</code><br>
+                            <code>
+                                >>> from math import *<br>
+                                >>> math.pi<br>
+                                Traceback (most recent call last):<br>
+                                File "&lt;stdin&gt;", line 1, in &lt;module&gt;<br>
+                                NameError: name 'math' is not defined<br>
+                                >>> pi<br>
+                                3.141592653589793
+                            </code>
+                            <div class="highlight">Notice that when imported using the <code>from ...  import ...</code> structure the subelements are imported individually and therefore can not be addressed via the module. Even though this might seem like good idea initially as the typing is considerably reduced, it is actually not a smart thing to do, because all the variables and functions from the module have entered you global scope and therefore can cause unpredicatable and unmanageable interference with functions and variables that you actually create in your global scope. If the idea of scope and namespace seems unfamiliar, do not worry. Just go learn about it, I'll prolly have a session on that. After than come here and read this again. I hope it will make more sense.</div>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            With some previous information about scope and namespace, it is of interest to know that modules can be imported within function scopes. These imports will not be accessible outside the scope of that function, that is to say, in some other function or in the global scope.<br>
+                            <code>
+                                >>> def root(a):<br>
+                                ...     import math<br>
+                                ...     return math.sqrt(a)<br>
+                                ... <br>
+                                >>> math.sqrt(5)<br>
+                                Traceback (most recent call last):<br>
+                                File "&lt;stdin&gt;", line 1, in &lt;module&gt;<br>
+                                NameError: name 'math' is not defined<br>
+                                >>> root(5)<br>
+                                2.23606797749979<br>
+                                >>> math.sqrt(5)<br>
+                                Traceback (most recent call last):<br>
+                                File "&lt;stdin&gt;", line 1, in &lt;module&gt;<br>
+                                NameError: name 'math' is not defined<br>
+                            </code>
+                            Notice how the module was not available in the global scope. And even if you think it was the fuction was just defined and not executed, notice that it was unavailable even after the function was executed. This is neat little trick to play with namespaces/scopes.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script src="../../scripts/tools.js"></script>
+    </body>
+</html>

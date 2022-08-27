@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    border-bottom:solid 1px darkgrey;
+    padding: 5vmin;
+    padding-bottom: 2vmin;
+    width: 100vw;
+}
+
+ion-icon {
+    padding: .4vh .5vw;
+    border-radius: 10%;
+    border: solid 1px dimgray;
+}
+
+h1, h2, h3 {
+    margin: 2vmin;
+}
+
+#content_box {
+    width: 100vw;
+    padding: 5vmin;
+}
+
+.highlight {
+    border: solid 1px darkgray;
+    background-color: hsla(0, 0%, 50%, .25);
+    font-style: oblique;
+    margin: 1vmin;
+    padding: 1vmin;
+    border-radius: 1vmin;
+}
+
+code {
+    font-style: normal;
+    color: brown;
+}
+
+@media screen and (min-width: 300px) and (min-height: 450px) {
+    html {
+        font-size: 130%;
+    }
+}

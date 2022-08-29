@@ -19,10 +19,6 @@ nav li {
     display:block; 
 }    
 
-a {
-    color: inherit;
-}
-
 #blog_release {
     font-weight: bold;
     font-size: 125%;

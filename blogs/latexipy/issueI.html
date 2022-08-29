@@ -24,7 +24,7 @@
             <h2>diagrams.py</h2>
             
             <ion-icon name="arrow-back" id="back_icon" accesskey="B" tabindex="1"></ion-icon>
-            <ion-icon name="moon" id="theme_icon" accesskey="T" tabindex="2"></ion-icon>
+            <ion-icon name="sunny" id="theme_icon" accesskey="T" tabindex="2"></ion-icon>
         </header>
         
         
@@ -48,28 +48,33 @@
                         &emsp; s="\\draw (0,0) -- (5,0);\n\\node[label=below:{x}]at(5, 0){};\n\\draw (0,0) -- (0,5);\n\\node[label=left:{y}]at(0, 5){};\n\\node[label=below:{O}]at(0, 0){};"
                         &emsp; return s<br>
                     </code>
+                </p>
             </section>
 
             <section id="setup">
                 <h3>setup()</h3>
-                I also thought of temporarily writing a preamble.<br>
-                <code class="highlight">
-                    # TODO the preamble needs to be moved to another script file, it needs to be made more flexible, probably by the use of optional arguments, also more seamless<br>
-                    '''<br>
-                    Function to set-up the document preamble as an article and essentials and name of the article is to be passed as argument.<br>
-                    '''<br>
-                    def setup(title):<br>
-                    &emsp; s="\\documentclass[12pt, a4paper]{article}\n\\usepackage[fleqn]{amsmath}\n\\usepackage{amssymb}\n\\usepackage{fullpage}\n\\usepackage{setspace}\n\\usepackage{tikz}\n\n\\everymath{\\displaystyle}\n\\allowdisplaybreaks\n\\setstretch{2}\n\n\\title{"+title+"}\n\\date{}\n\n\\begin{document}\n\\setlength{\\abovedisplayskip}{0pt}\n\\setlength{\\belowdisplayskip}{0pt}\n\\setlength{\\abovedisplayshortskip}{0pt}\n\\setlength{\\belowdisplayshortskip}{0pt}\n\n\n\\maketitle\n\n"<br>
-                    &emsp; return s<br>
-                </code>
+                <p>
+                    I also thought of temporarily writing a preamble.<br>
+                    <code class="highlight">
+                        # TODO the preamble needs to be moved to another script file, it needs to be made more flexible, probably by the use of optional arguments, also more seamless<br>
+                        '''<br>
+                        Function to set-up the document preamble as an article and essentials and name of the article is to be passed as argument.<br>
+                        '''<br>
+                        def setup(title):<br>
+                        &emsp; s="\\documentclass[12pt, a4paper]{article}\n\\usepackage[fleqn]{amsmath}\n\\usepackage{amssymb}\n\\usepackage{fullpage}\n\\usepackage{setspace}\n\\usepackage{tikz}\n\n\\everymath{\\displaystyle}\n\\allowdisplaybreaks\n\\setstretch{2}\n\n\\title{"+title+"}\n\\date{}\n\n\\begin{document}\n\\setlength{\\abovedisplayskip}{0pt}\n\\setlength{\\belowdisplayskip}{0pt}\n\\setlength{\\abovedisplayshortskip}{0pt}\n\\setlength{\\belowdisplayshortskip}{0pt}\n\n\n\\maketitle\n\n"<br>
+                        &emsp; return s<br>
+                    </code>
+                </p>
             </section>
 
             <section id="line()">
-                I also wrote a little piece to draw lines, I made it ask for input of co-ordinates, rather than taking it as argument. I added a lot of features to add in future.<br> 
-                <code class="highlight">
-                    # TODO Option to add arrowhead, options to draw with an angle measurement, a way to let use enter data as arguments or to ask interactively, smartly<br>
-                    '''<br>
-                    Function to draw a line. Takes no arguments. Asks for input of co-ordinates interactively.<br>
+                <h3>line()</h3>
+                <p>
+                    I also wrote a little piece to draw lines, I made it ask for input of co-ordinates, rather than taking it as argument. I added a lot of features to add in future.<br> 
+                    <code class="highlight">
+                        # TODO Option to add arrowhead, options to draw with an angle measurement, a way to let use enter data as arguments or to ask interactively, smartly<br>
+                        '''<br>
+                        Function to draw a line. Takes no arguments. Asks for input of co-ordinates interactively.<br>
                         '''<br>
                         def line():<br>
                         &emsp; sx=float(input("Enter starting position x"))<br>
@@ -84,9 +89,9 @@
 
             <section id="Improvements">
                 <p>
-                    After that much I tried using the script a little. It's almost unusable. But that did give me some ideas.<br>
+                    After that much I tried using the script a little. It was almost unusable. But that did give me some ideas.<br>
                     <br>
-                    First off, I will change setup() to actually create a file, and write into it. I will also create another function finish() to add the <code>/end{document}</code>. Similarly I will create a wrapper for diagrams. These pieces don't contribute to the speed, and might seem redundant but they felt necessary for completeness, without which, whatever I was doing was becoming almost unusable.<br>
+                    First off, I will change setup() to actually create a file, and write into it. I will also create another function finish() to add the <code>\end{document}</code>. Similarly I will create a wrapper for diagrams. These pieces don't contribute to the speed, and might seem redundant but they felt necessary for completeness, without which, whatever I was doing was becoming almost unusable.<br>
                     <br>
                     I added <code>f=open(title+".tex", "w")</code> to the beginning of the function definition and the ending looks like:<br>
                     <code>f.write(s)<br>

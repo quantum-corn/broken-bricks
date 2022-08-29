@@ -29,10 +29,14 @@ h1, h2, h3 {
 .highlight {
     border: solid 1px darkgray;
     background-color: hsla(0, 0%, 50%, .25);
-    font-style: oblique;
     margin: 1vmin;
     padding: 1vmin;
     border-radius: 1vmin;
+    display: block;
+}
+
+div.highlight {
+    font-style: oblique;
 }
 
 code {

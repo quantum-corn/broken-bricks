@@ -21,7 +21,7 @@
         <header role="banner">     
             <!--TODO change the heading-->
             <h1>Snake Charmer</h1>
-            <h2>Modules - Issue I</h2>
+            <h2>Modules I</h2>
             
             <ion-icon name="arrow-back" id="back_icon" accesskey="B" tabindex="1"></ion-icon>
             <ion-icon name="moon" id="theme_icon" accesskey="T" tabindex="2"></ion-icon>
@@ -54,8 +54,7 @@
                     <div class="highlight">(Advanced)<br>
                         Another thing to take care of, is that the module source code is at a location where Python is going to look for it. Usually this means the locations on the <code>$PATH</code> global variable of the operating system. This usually isn't a worry because modules installed via <code>pip</code>, which is where we get most of our modules, go to a location which Python stores on <code>$PATH</code> when Python is installed. This becomes a thing to look out for when we are playing around with our own module or something we got from somewhere other than a package manager, like <code>pip</code>. One way to simplify such situations is to use the full path of the module source code when we import the module into our code.</div>
                     Importing is done by the keyword <code>import</code>. At this point I must digress a little and talk about the structure of modules. Just how files are structured inside a directory, with subdirectories, modules may have submodules, and you can import only submodules instead of the whole module, using keyword <code>from</code>, or the dot operator, which is a matter of object orientation and needs not be worried about at this stage. This is what you should do as often as possible to keep your code slim and trim. It's just more efficient. Also while importing a module we can give it an alias using keyword <code>as</code>, which is just a nerdy way of saying nickname.
-                    <div class="highlight">
-                        <code>
+                        <code class="highlight">
                             import random
                             <hr>
                             import random as ran
@@ -68,7 +67,6 @@
                             <hr>
                             import matplotlib.pyplot as plt
                         </code>
-                    </div>
                     The first case os importing module called <code>random</code>. The second case does the same but also gives it the alias (nickname) <code>ran</code> (we will see later why this matters). The third and fifth cases imports a submodule <code>pyplot</code> from a module <code>matplotlib</code> which is a module to create plots and graphs using different ways. The fourth and sixth cases, as you can guess, do the same but also give the submodule a nickname <code>plt</code>.
                 </p>
             </section>
@@ -83,7 +81,7 @@
                         </ul>
                     </div>
                     We need to know the exact variable name in which the data want to access is stored inside the module, or the name of the function we want to use in our code. This is part that involves learning how to use a certain module. And it is not hard. And as always Google is always there to help. Let us look at some examples.<br>
-                    <code>
+                    <code class="highlight">
                         >>> import random<br>
                         >>> rng=random.Random()<br>
                         >>> # This line was technically a class instance creation, as the Random() is used. And it's an established tradition to start constructor names with capital letters. Constructors are special functions used to create copies of classes. But this is a matter of Object Orientation.<br>
@@ -108,9 +106,9 @@
                         Notice how sometimes parenthesis is used and sometimes not. We know we use parenthesis for functions. So this explain how sometimes we are using functions to get our job done eg. <code>rng.random()</code>, and sometimes, we use plain data, eg. <code>math.pi</code>.
                     </div>
                     Notice how the module name is used before every use of a data or function of that module. This is a way to tell the system, for example, 'get the value of the variable <code>pi</code> from the source code of the <code>math</code> module', or 'use a function called <code>sqrt()</code> the definition of which is in the source code of the <code>math</code> module'. But then another question that presents itself is why was <code>rng.random()</code> used instead of the module name. The answer again is Object Orientation. That one line where we created a copy of the class <code>random</code>, via <code>Random()</code>. SO now instead of accessing the original source code we are accessing the copy that we named <code>rng</code>. These copies are called objects. It is one of the many magical things that Object Orientation lets us do. Now let us look at some examples using aliases.<br>
-                    <code>
+                    <code class="highlight">
                         >>> import math as m<br>
-                        >>> math.sin(math.pi)<br><br>
+                        >>> math.sin(math.pi)<br>
                         Traceback (most recent call last):<br>
                         File "&lt;stdin&gt;", line 1, in &lt;module&gt;<br>
                         NameError: name 'math' is not defined<br>
@@ -130,7 +128,7 @@
                     <li>
                         <p>
                             We can import all the subelements of a module by using the * shortcut, eg. <code> from math import *</code><br>
-                            <code>
+                            <code class="highlight">
                                 >>> from math import *<br>
                                 >>> math.pi<br>
                                 Traceback (most recent call last):<br>
@@ -145,11 +143,11 @@
                     <li>
                         <p>
                             With some previous information about scope and namespace, it is of interest to know that modules can be imported within function scopes. These imports will not be accessible outside the scope of that function, that is to say, in some other function or in the global scope.<br>
-                            <code>
+                            <code class="highlight">
                                 >>> def root(a):<br>
-                                ...     import math<br>
-                                ...     return math.sqrt(a)<br>
-                                ... <br>
+                                ... &emsp; import math<br>
+                                ... &emsp; return math.sqrt(a)<br>
+                                ... &emsp; <br>
                                 >>> math.sqrt(5)<br>
                                 Traceback (most recent call last):<br>
                                 File "&lt;stdin&gt;", line 1, in &lt;module&gt;<br>

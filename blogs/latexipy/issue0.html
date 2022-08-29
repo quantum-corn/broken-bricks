@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" lang="en-US">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--TODO change author, title, etc.-->
+        <meta name="author" content="quantum-corn">
+        <meta name="keywords" content="computer, programming, coding, python, modules, latex, online, teaching, typesetting">
+        <meta name="description" content="Python Project Latexipy Blog">
+
+        <title>Latexipy</title>
+
+        <link rel="stylesheet" href="../../styles/reading_mode.css">
+        <link rel="stylesheet" href="../../styles/fonts.css">
+        <link rel="stylesheet" href="../../styles/animations.css">
+        <link rel="stylesheet" href="../../styles/light_theme.css" id="theme_style">
+    </head>
+    
+    <body>
+        <header role="banner">     
+            <!--TODO change the heading-->
+            <h1>Latexipy</h1>
+            <h2>Issue I</h2>
+            
+            <ion-icon name="arrow-back" id="back_icon" accesskey="B" tabindex="1"></ion-icon>
+            <ion-icon name="moon" id="theme_icon" accesskey="T" tabindex="2"></ion-icon>
+        </header>
+        
+
+        <div id="content_box" spellcheck="true" translate="yes">
+            <section id="intro">
+                <h3>Introduction to Latexipy</h3>
+                <p>I just started teaching high school physics online. And in the very first class I came to realize that I need to write mathematical equations and to draw diagrams and the whiteboard on any online video conferencing platform wasn't suited to do that. Yes, using a graphic tablet helps, but I didn't have one and I didn't want to buy one either. So, I was looking for alternatives.</p>
+
+                <p>With the fact that I have worked with <b>LaTeX</b> quite extensively before, that was the first thing to come to my mind. But a few moments of considering it, and I realized, it's not going to be fast enough to work as I speak. I needed something that could add similar blocks of certain commands on the fly, with the option to modify parameters, <em>macros</em>, so to speak. Much like a programming language's functions. Now <b>LaTeX</b> allows creating macros as far as I know, but I never used it before and I wasn't feeling up for learning because <b>LaTeX</b> cannot do mathematical processing anyway, whereas a programming language would add that benefit. So I decided to create some interface in some programming language.</p>
+            </section>
+
+            <section>
+                <h3>Why Python?</h3>
+                <p>I chose <em>Python</em>  over anything else becuase:
+                    <ul>
+                        <li>It has some existing <b>LaTeX</b> support that I know of. With a Google search I figured it was <i>Pylatex</i>. But it was done really granular and I didn't find the interface fast enough, or maybe I judged it too quick, I just didn't want to put in the time to learn it, I guess.</li>
+
+                        <li><em>Python</em> has great support for doing science and math. So that combined with my interface would be a great help. Among these I was certainly looking at a certain <em>Python</em>  package called <i>Sympy</i>. It's a fabulous thing that let's you carry out symbolic algebra within <em>Python</em>  and also can give the output as LaTeX.</li>
+                    </ul>
+                    And since I was creating a tool, I thought it might be good to create it like an importable package. Now that is one thing I never did in all my time with <em>Python</em>, so I set out to learn about that before I came back to the project. That part of the story can be found <a href="../snake_charmer/index.html">here</a>.
+                </p>
+                
+                <p>So this project <em>Latexipy</em>, is about a creating a tool in <em>Python</em> that adds intuitiveness, speed, and a background engine to do some math to <b>LaTeX</b>.</p>
+            </section>
+            
+            <section>
+                <h3>What's this blog got to do with it?</h3>
+                <p>
+                    Now that you understand the project, let me tell you a little about the blog. <b>This is not a tutorial</b>. So I will assume you know the stuff. I am writing tutorial blogs on related things in other series of blogs that can be found <a href="../../index.html">here</a>. This is more like a journal where I will share my journey and my experience, practially like those gameplay streams on Twitch and YouTube and such, but this is not video, it's text, and this not game, this is code. I think there are 'watc me code' videos out there too. I'll share here, things I learn along the way from this experience. And you might find me ranting. Even thought I am going to use Python's built in <em>doctring</em> feature to make an internal documentation and help system, for anything it doesn't cover, this  might be considered documentation for the project, unless there is an actual documentation some time in the future. The repository for the project can be found <a href="https://github.com/quantum-corn/latexipy">here</a>.
+                </p>
+            </section>
+        </div>
+
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script src="../../scripts/tools.js"></script>
+    </body>
+</html>

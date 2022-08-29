@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" lang="en-US">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--TODO change author, title, etc.-->
+        <meta name="author" content="quantum-corn">
+        <meta name="keywords" content="computer, programming, coding, python, modules, latex, online, teaching, typesetting">
+        <meta name="description" content="Python Project Latexipy Blog">
+
+        <title>Latexipy</title>
+
+        <link rel="stylesheet" href="../../styles/reading_mode.css">
+        <link rel="stylesheet" href="../../styles/fonts.css">
+        <link rel="stylesheet" href="../../styles/animations.css">
+        <link rel="stylesheet" href="../../styles/light_theme.css" id="theme_style">
+    </head>
+    
+    <body>
+        <header role="banner">     
+            <!--TODO change the heading-->
+            <h1>Latexipy</h1>
+            <h2>diagrams.py</h2>
+            
+            <ion-icon name="arrow-back" id="back_icon" accesskey="B" tabindex="1"></ion-icon>
+            <ion-icon name="moon" id="theme_icon" accesskey="T" tabindex="2"></ion-icon>
+        </header>
+        
+        
+        <div id="content_box" spellcheck="true" translate="yes">
+            <section id="intro">
+                <h3>Introduction</h3>
+                <p>
+                    Typically the first step in any project is to write the README.md. But I have a class to take very soon, so I need this thing to be of some help, so I'll start with writing some basic macros to create some diagrams I expect to be useful. I will likely be teaching <em>Motion in a Plane</em>. My strategy here is to write functions that return certain strings, with some form of parametric control. I know it's not very seamless, but it's okay for now, I am using docstrings to document the code along the way and putting TODO markers at relevant places.
+                </p>
+            </section>
+
+            <section id="axes">
+                <h3>axes()</h3>
+                <p>
+                    So the first step is 2D co-ordinate axes.<br>
+                    <code class="highlight">
+                        '''<br>
+                        Function to draw 2D co-ordinate axes.<br>
+                        '''<br>
+                        def axes():<br>
+                        &emsp; s="\\draw (0,0) -- (5,0);\n\\node[label=below:{x}]at(5, 0){};\n\\draw (0,0) -- (0,5);\n\\node[label=left:{y}]at(0, 5){};\n\\node[label=below:{O}]at(0, 0){};"
+                        &emsp; return s<br>
+                    </code>
+            </section>
+
+            <section id="setup">
+                <h3>setup()</h3>
+                I also thought of temporarily writing a preamble.<br>
+                <code class="highlight">
+                    # TODO the preamble needs to be moved to another script file, it needs to be made more flexible, probably by the use of optional arguments, also more seamless<br>
+                    '''<br>
+                    Function to set-up the document preamble as an article and essentials and name of the article is to be passed as argument.<br>
+                    '''<br>
+                    def setup(title):<br>
+                    &emsp; s="\\documentclass[12pt, a4paper]{article}\n\\usepackage[fleqn]{amsmath}\n\\usepackage{amssymb}\n\\usepackage{fullpage}\n\\usepackage{setspace}\n\\usepackage{tikz}\n\n\\everymath{\\displaystyle}\n\\allowdisplaybreaks\n\\setstretch{2}\n\n\\title{"+title+"}\n\\date{}\n\n\\begin{document}\n\\setlength{\\abovedisplayskip}{0pt}\n\\setlength{\\belowdisplayskip}{0pt}\n\\setlength{\\abovedisplayshortskip}{0pt}\n\\setlength{\\belowdisplayshortskip}{0pt}\n\n\n\\maketitle\n\n"<br>
+                    &emsp; return s<br>
+                </code>
+            </section>
+
+            <section id="line()">
+                I also wrote a little piece to draw lines, I made it ask for input of co-ordinates, rather than taking it as argument. I added a lot of features to add in future.<br> 
+                <code class="highlight">
+                    # TODO Option to add arrowhead, options to draw with an angle measurement, a way to let use enter data as arguments or to ask interactively, smartly<br>
+                    '''<br>
+                    Function to draw a line. Takes no arguments. Asks for input of co-ordinates interactively.<br>
+                        '''<br>
+                        def line():<br>
+                        &emsp; sx=float(input("Enter starting position x"))<br>
+                        &emsp; sy=float(input("Enter starting position y"))<br>
+                        &emsp; ex=float(input("Enter ending position x"))<br>
+                        &emsp; ey=float(input("Enter ending position y"))<br>
+                        &emsp; s=f"\draw ({sx}, {sy}) -- ({ex}, {ey}"<br>
+                        &emsp; return s<br>
+                    </code>
+                </p>
+            </section>
+
+            <section id="Improvements">
+                <p>
+                    After that much I tried using the script a little. It's almost unusable. But that did give me some ideas.<br>
+                    <br>
+                    First off, I will change setup() to actually create a file, and write into it. I will also create another function finish() to add the <code>/end{document}</code>. Similarly I will create a wrapper for diagrams. These pieces don't contribute to the speed, and might seem redundant but they felt necessary for completeness, without which, whatever I was doing was becoming almost unusable.<br>
+                    <br>
+                    I added <code>f=open(title+".tex", "w")</code> to the beginning of the function definition and the ending looks like:<br>
+                    <code>f.write(s)<br>
+                    return f</code><br>
+                    <br>
+                    Now to keep the thing more seamless, I will add a<br>
+                    <code>title=''</code><br>
+                    to the global scope that will have to be set from the script importing this. With that <code>setup()</code> now becomes:
+                    <code class="highlight">
+                        # TODO the preamble needs to be moved to another script file, it needs to be made more flexible, probably by the use of optional arguments, also more seamless<br>
+                        '''<br>
+                        Function to set-up the document preamble as an article and essentials.<br>
+                        '''<br>
+                        def setup():<br>
+                        &emsp; global f<br>
+                        &emsp; f=open(title+".tex", "w")<br>
+                        &emsp; s="\\documentclass[12pt, a4paper]{article}\n\\usepackage[fleqn]{amsmath}\n\\usepackage{amssymb}\n\\usepackage{fullpage}\n\\usepackage{setspace}\n\\usepackage{tikz}\n\n\\everymath{\\displaystyle}\n\\allowdisplaybreaks\n\\setstretch{2}\n\n\\title{"+title+"}\n\\date{}\n\n\\begin{document}\n\\setlength{\\abovedisplayskip}{0pt}\n\\setlength{\\belowdisplayskip}{0pt}\n\\setlength{\\abovedisplayshortskip}{0pt}\n\\setlength{\\belowdisplayshortskip}{0pt}\n\n\n\\maketitle\n\n"<br>
+                        &emsp; f.write(s)<br>
+                    </code>
+                    The last line of the other two fucntions also cange from <code>return s</code> to <code> f.write(s)</code>.<br>
+                    Additionally, I added these parts:
+                    <code class="highlight">
+                        '''<br>
+                        A function to start a diagram.<br>
+                        '''<br>
+                        def diagram():<br>
+                        &emsp; s="\\begin{tikzpicture}"<br>
+                        &emsp; f.write(s)<br>
+                        <br>
+                        '''<br>
+                        A function to finish a diagram.<br>
+                        '''<br>
+                        def diagram():<br>
+                        &emsp; s="\\end{tikzpicture}"<br>
+                        &emsp; f.write(s)<br>
+                        <br>
+                        '''<br>
+                        Function to close the current document.<br>
+                        '''<br>
+                        def finish():<br>
+                        &emsp; f.close()<br>
+                    </code>
+
+                    I'll publish this blog and push this version to the repository without even testing it at this stage.
+                </p>
+            </section>
+        </div>
+
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script src="../../scripts/tools.js"></script>
+    </body>
+</html>

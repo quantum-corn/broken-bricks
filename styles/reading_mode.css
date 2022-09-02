@@ -44,6 +44,15 @@ code {
     color: brown;
 }
 
+quote, blockquote {
+    font-style: italic;
+}
+
+blockquote {
+    line-height: 120%;
+    word-spacing: 120%;
+}
+
 @media screen and (min-width: 300px) and (min-height: 450px) {
     html {
         font-size: 130%;

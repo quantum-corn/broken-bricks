@@ -21,7 +21,7 @@ nav li {
 
 #blog_release {
     font-weight: bold;
-    font-size: 125%;
+    font-size: 75%;
 }
 
 @media screen and (max-width: 299px) and (max-height: 449px) {

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 header {
     border-bottom:solid 1px darkgrey;
     padding: 5vmin;
@@ -29,7 +33,7 @@ h1, h2, h3 {
 .highlight, blockquote {
     border: solid 1px darkgray;
     background-color: hsla(0, 0%, 50%, .25);
-    margin: 1vmin;
+    margin: 1vmin 0;
     padding: 1vmin;
     border-radius: 1vmin;
     display: block;
@@ -51,8 +55,26 @@ blockquote {
     letter-spacing: 120%;
 }
 
+img {
+    padding: 1vmin;
+    border-radius: 2.5vmin;
+}
+
+figcaption {
+    font-size: 75%;
+    text-align: center;
+}
+
+figure {
+    padding: 1vmin;
+}
+
 @media screen and (min-width: 300px) and (min-height: 450px) {
     html {
         font-size: 130%;
+    }
+
+    .fltrt {
+        float: right;
     }
 }

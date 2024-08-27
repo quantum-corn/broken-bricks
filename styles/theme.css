@@ -1,0 +1,19 @@
+body{
+    background-color: #b39977;
+}
+
+header, footer {
+    background-color: #342519;
+}
+
+.spotlight {
+    background-color: #735237;
+}
+
+header, footer, .text, .spotlight h2 {
+    color: #ede6d9;
+}
+
+h2 {
+    color: #342519;
+}

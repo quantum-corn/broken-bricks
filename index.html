@@ -4,104 +4,54 @@
     <head>
         <meta charset="utf-8" lang="en-US">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--TODO change author, title, etc.-->
         <meta name="author" content="quantum-corn">
-        <meta name="keywords" content="science, tech, blog">
-        <meta name="description" content="Science and Tech Blog">
+        <meta name="keywords" content="blog">
+        <meta name="description" content="Blog">
 
-        <title>Quantum Corn</title>
+        <title>Broken Bricks</title>
 
-        <link rel="stylesheet" href="./styles/layout.css">
-        <link rel="stylesheet" href="./styles/visual.css">
-        <link rel="stylesheet" href="./styles/fonts.css">
-        <link rel="stylesheet" href="./styles/animations.css">
-        <link rel="stylesheet" href="./styles/dark_theme.css" id="theme_style">
+        <link href="./styles/reset.css" rel="stylesheet">
+        <link href="./styles/layout.css" rel="stylesheet">
+        <link href="./styles/theme.css" rel="stylesheet">
+        <link href="./styles/fonts.css" rel="stylesheet">
+
     </head>
     
     <body>
-        <header role="banner">     
-            <!--TODO change the heading-->
+        <header>     
             <h1>Broken Bricks</h1>
-            
-            <!--TODO icon based list-->
-            <nav role="navigation">
-                <ul>
-                    <li class="home" accesskey="H" tabindex="1" translate="yes">Home</li><!--
-                    --><li class="blogs" accesskey="B" tabindex="2" translate="yes">Blogs</li><!--
-                    --><li class="author" accesskey="A" tabindex="3" translate="yes">Authors</li>
+            <nav>
+                <ul class="nav">
+                    <li class="home" accesskey="H" tabindex="1" translate="yes"><ion-icon name="home-outline"></ion-icon></li>
+                    <li class="blogs" accesskey="B" tabindex="2" translate="yes"><ion-icon name="book-outline"></ion-icon></li>
+                    <li class="author" accesskey="A" tabindex="3" translate="yes"><ion-icon name="people-outline"></ion-icon></li>
+                    <li class="contact" accesskey="C" tabindex="4" translate="yes"><ion-icon name="call-outline"></ion-icon></li>
                 </ul>
             </nav>
-
-            <ion-icon name="sunny" id="theme_icon" accesskey="T" tabindex="4"></ion-icon>
         </header>
-        
-
-        <div id="content_box" spellcheck="true" translate="yes">
-            <main class="home">
-                <div id="intro">
-                    <p>Hello there! Welcome to Broken Bricks!</p>
-                    <p>I just finished coding up the bare-bones of this site. There's so much more to do. But that will come in due time. You can find here some basic info about us and the content of our podcast and some other stuff in future perhaps.</p>
-                    <p>
-                        Find our podcast <br>
-                        <a href="https://open.spotify.com/show/0kB5aOzyGue9WQnCbF0NnJ?si=LxCOo6_8SMOPpuv66kIgFw" target="_blank" rel="noopener noreferer"><img src="./assets/icons/spotify.avif" alt="spotify" width="50px" height="50px"></a> <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy9lNjI1MzdkMC9wb2RjYXN0L3Jzcw?ep=14" target="_blank" rel="noopener noreferer"><img src="./assets/icons/googlepodcasts.avif" alt="google podcasts" width="40px" height="40px"></a> <a href="https://q4k0kx5j.r.us-east-1.awstrack.me/L0/https:%2F%2Fmusic.amazon.co.uk%2Fpodcasts%2F938b21f5-4d2a-482a-aef4-2df908ccf99a/1/01000189f98777c7-b9025276-ffb6-4157-88d2-b40af028fdc0-000000/_8hKIWVgfFX06M0HEiRzu5JHu8k=335" target="_blank" rel="noopener noreferer"><img src="./assets/icons/amazonmusic.avif" alt="amazon music" width="40px" height="40px"></a>
-                    </p>
-                    <p>Follow us <a href="https://instagram.com/brokenbricks.official" target="_blank" rel="noopener noreferer"><ion-icon name="logo-instagram"></ion-icon></a></p>
-                    <p>You can support us at <br>
-                        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-                        <script type='text/javascript'>
-                            kofiwidget2.init('buy me a book', '#bf1d55', 'R5R7O37GT');
-                            kofiwidget2.draw();
-                        </script>
-                        <br>
-                        <a href="https://www.buymeacoffee.com/quantumcorn"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a book&emoji=📖&slug=quantumcorn&button_colour=bf1d55&font_colour=ffffff&font_family=Comic&outline_colour=ffffff&coffee_colour=FFDD00" /></a>
-                    </p>
-                </div>
-                <p><br></p>
-                <div id="blog_release">
-                    Sept, 2 - The Seed Sprouts & The Sapling Grows > Meditations - Issue-I is live!<br>
-                    Sept, 3 - Is The Darkness Real or The Light? > Issue I is live<br>
-                    Hackers Love Unicorns & Magic > Issue-I, Issue-II are live!<br>
-                    Reasonable Unreasonable > Issue I is live!<br>
-                    Sept, 5 - The Seed Sprouts & The Sapling Grows > The Leader Who Had No Title - Issue-I is live<br>
-                    <!-- Sept, 6 - Threshold, Twilight and Thoughts is live (under Loose Pages)!-->
-                </div>
-            </main>
-
-            <main class="blogs">
-                <ul >
-                    <li>Physics</li>
-                    <ul>
-                        <li><a href="./blogs/unreason/index.html" accesskey="R" tabindex="7">Reasonably Unreasonable</a></li>
-                    </ul>
-                    <li>Computer</li>
-                    <ul>
-                        <li><a href="./blogs/hackers/index.html" accesskey="M" tabindex="8">Hackers Love Unicorns & Magic</a></li>
-                    </ul>
-                    <li>Books</li>
-                    <ul>
-                        <li><a href="./blogs/sapling/index.html" accesskey="G" tabindex="11">The Seed Sprouts & The Sapling Grows</a></li>
-                    </ul>
-                    <li>Author's voice</li>
-                    <ul>
-                        <li><a href='./blogs/dark/index.html' accesskey="D" tabindex="12">Is The Darkness Real Or The Light?</a></li>
-                        <li><a href="./blogs/pages/index.html" accesskey='P' tabindex='13'>Loose Pages</a></li>
-                    </ul>
-                </ul>
-            </main>
-
-            <main class="author">
-                <p>Coming soon!</p>
-                <!--<p>So, you  wanna know about me? Let's start from the beginning. But know that this is also a work in progress, as all things about this site, so it is prone to change anytime, or have stuff added, so come back once in a while. But then, am I not a work in progress too? Aren't we all?</p>
-                <p>I am just an ordinary average guy. Yeah, you guessed it right, it's that song!</p>
-                <p>Even since I was a tiny tot, I knew I had to be that one lucky man, who gets to be with that one beautiful woman. I wanted to be a scientist. Yeah I know, but back then it really seemed like a good idea. I had found my lady love, even before I knew who I was, and little did I know, that was recipe for disaster.</p>
-                <p>So when I was in 9th grade, we had to take a course on Java. Putting aside the earlier courses on HTML, BASIC, and such languages, which for one no cared to put an effort into teaching me or so much as introducing me to the idea of programming, and for the other, I myself was far too young to understand the power of programming. Now, Java was my introduction to the art of programming and the very first look into the depth in it's eyes and I knew I found the love of my life, a second time, and then I was too young to know that was recipe for disaster, again.</p>
-                <p>So, right now, I do physics, programming and I learn french and japanese and I learn to play guitar. And I love to read and to listen to music. As you might have learned from the language 'japanese', I am, well, big time into anime. I do play some games, sometimes. Not just anime, I like movies and series too.</p>-->
-            </main>
+        <div class="intro">
+            <img class="homepage image" src="./assets/images/homepage-intro.jpg" alt="an aesthetic image showing a window from inside a room, with book on the window sill and an open book on a cozy bed, while the window looks out to a drizzle, there is also a cup, a notepad and pen and a vase with a bunch of sunflowers">
+            <div class="homepage text">
+                <h2>Hi!</h2>
+                <p>Welcome to Broken Bricks. This is our journal, our space and our voice. Here we write on various things that reside within our minds - Physics, Computers, Art & Design, Society, Philosophy and some of our more abstract musings. Check out the blogs page to learn more. We appreciate you reading the stuff we write. You have our heartfelt gratitude and our attention in case you have something to say to us.</p>
+                <p>You can learn more about us from the authors page, and you can reach out to us from the contact page.</p>
+            </div>
         </div>
-
+        <div class="spotlight">
+            <h2>This is empty for now!</h2>
+        </div>
+        <div class="new">
+            <img class="homepage image" src="./assets/images/homepage-filler.jpg" alt="an aesthetic image showing a typewriter, a pair of eyeglasses on an open book, a camera on top of a stack of books, a pullover, and autumn leaves scattered all around">
+            <div class="homepage text">
+                <h2>What's new!</h2>
+                <ul class="list">
+                    <li>Site launch!</li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+        </footer>
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script src="./scripts/tools.js"></script>
-        <script src="./scripts/setup.js"></script>
     </body>
 </html>

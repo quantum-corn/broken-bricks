@@ -1,68 +1,77 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-nav, #theme_icon {
-    position: absolute;
-    bottom: 1vh;
-    margin: 6vh, 5vw;
+header, .into, .spotlight, .new, footer {
+    width:100vw;
 }
 
-#theme_icon {
+.intro {
+    position: fixed;
+    top: 7vh;
+    height: 30vh;
+}
+
+.spotlight {
+    position: fixed;
+    top: 37vh;
+    height: 30vh;
+}
+
+.new {
+    position: fixed;
+    top: 67vh;
+    height: 28vh;
+}
+
+footer {
+    position: fixed;
+    top: 95vh;
+    height: 4vh;
+}
+    
+header, h1, .nav{
+    position: fixed;
+    top: 1vh;
+    height: 6vh;
+}
+
+h1, .nav li {
+    padding: 0.5vh 2vw;
+}
+
+.nav{
+    right:0;
+    list-style: none;
+}
+
+.nav li, .homepage {
+    display: inline-block;
+}
+
+.text, .image {
+    height: 30vh;
+    width: 50vw;
+}
+
+.intro .text, .new .image{
+    position: fixed;
     right: 0;
 }
 
-nav li {
-    display: inline;
+.intro .image, .new .text{
+    position: fixed;
+    left: 0;
 }
 
-header {
-    width: 100vw;
-    z-index: 100;
+.text{
+    padding: 1vh 1vw;
 }
 
-#content_box {
-    width: 100vw;
+p {
+    margin-top: 1vh;
 }
 
-@media screen and (min-width: 300px) and (min-height: 450px) {
-    header {
-        height: 33vh;
-        position: fixed;
-    }
-
-    header h1 {
-        padding-left: 2.5vw;
-        margin-top: 11vh;
-    }
-    
-    nav {
-        margin: 0 0;
-        width: 66vw;
-        height: 5vh;
-        padding: 0 14vw;
-        padding-right: 0;
-    }
-    
-    #theme_icon {
-        padding: .4vh .5vw;
-        margin: .5vh 4vw;
-    }
-    
-    nav li {
-        padding: 0 .5vw;
-    }
-    
-    #content_box {
-        height: 61.5vh;
-        position: fixed;
-        top: 33vh;
-        left: 14vw;
-        margin: .5vh 2.5vw 5vh 0;
-        padding: 2.5vmin 2vmin;
-        width: 83.5vw;
-        overflow: auto;
-    }
+.new .list {
+    padding: 18pt;
 }

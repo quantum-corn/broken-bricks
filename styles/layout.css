@@ -1,77 +1,69 @@
-* {
-    box-sizing: border-box;
+body {
+    padding: 12px 0;
 }
 
-header, .into, .spotlight, .new, footer {
-    width:100vw;
+header, .nav, .intro, .highlight, .new {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.intro {
-    position: fixed;
-    top: 7vh;
-    height: 30vh;
+header, .highlight {
+    justify-content: space-between;
+}
+
+.intro, .new {
+    justify-content: center;
+}
+
+header {
+    padding: 0 12px;
+    gap: 24px;
+}
+
+.nav {
+    flex-wrap: wrap;
+    gap: 60px;
+    list-style: none;
+    padding: 8px 0;
+}
+
+.image {
+    flex: 0 0 auto;
+    align-self: center;
+}
+
+.text {
+    padding: 24px;
+    flex: 1 1 auto;
+    width: 360px;
+}
+
+h2 {
+    margin-bottom: 24px;
 }
 
 .spotlight {
-    position: fixed;
-    top: 37vh;
-    height: 30vh;
+    padding: 24px;
+}
+
+.highlight {
+    gap: 24px;
+}
+
+.card {
+    width: 180px;
+    height: 240px;
+    flex: 0 0 auto;
 }
 
 .new {
-    position: fixed;
-    top: 67vh;
-    height: 28vh;
+    flex-direction: row-reverse;
+}
+
+.new li {
+    list-style-type: none;
 }
 
 footer {
-    position: fixed;
-    top: 95vh;
-    height: 4vh;
-}
-    
-header, h1, .nav{
-    position: fixed;
-    top: 1vh;
-    height: 6vh;
-}
-
-h1, .nav li {
-    padding: 0.5vh 2vw;
-}
-
-.nav{
-    right:0;
-    list-style: none;
-}
-
-.nav li, .homepage {
-    display: inline-block;
-}
-
-.text, .image {
-    height: 30vh;
-    width: 50vw;
-}
-
-.intro .text, .new .image{
-    position: fixed;
-    right: 0;
-}
-
-.intro .image, .new .text{
-    position: fixed;
-    left: 0;
-}
-
-.text{
-    padding: 1vh 1vw;
-}
-
-p {
-    margin-top: 1vh;
-}
-
-.new .list {
-    padding: 18pt;
+    padding: 12px;
 }

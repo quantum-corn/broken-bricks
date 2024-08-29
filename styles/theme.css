@@ -1,4 +1,4 @@
-body{
+html{
     background-color: #b39977;
 }
 
@@ -10,8 +10,12 @@ header, footer {
     background-color: #735237;
 }
 
-header, footer, .text, .spotlight h2 {
+header, footer, .spotlight h2 {
     color: #ede6d9;
+}
+
+.text {
+    color: #735237;
 }
 
 h2 {

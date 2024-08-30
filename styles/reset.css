@@ -8,6 +8,10 @@ body {
     min-height: 100vh;
 }
 
+a {
+    text-decoration: none;
+}
+
 html::-webkit-scrollbar{
     width: 0;
 }

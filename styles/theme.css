@@ -10,7 +10,7 @@ header, footer {
     background-color: #735237;
 }
 
-header, .spotlight h2 {
+header, header a, .spotlight, .spotlight a, h2 {
     color: #ede6d9;
 }
 

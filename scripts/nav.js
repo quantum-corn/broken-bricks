@@ -12,11 +12,14 @@ const setBg = function(e, state) {
 }
 
 const toggleLabel = function(e, state) {
-    let item=e.target.parentElement;
+    let icon=e.target.parentElement;
+    let item=icon.parentElement;
+
     if(state) {
-        let label=document.createElement("span");
+        let label=document.createElement("a");
         label.textContent=item.className;
         label.className="label"
+        label.href=icon.href;
         item.appendChild(label);
     }
     else {

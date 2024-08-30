@@ -10,6 +10,10 @@ h2 {
     text-align: left;
 }
 
+.label {
+    font-size: 18px;
+}
+
 .text {
     font-family:"Monserrat", sans-serif;
     font-size: 18pt;

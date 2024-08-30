@@ -10,8 +10,12 @@ header, footer {
     background-color: #735237;
 }
 
-header, footer, .spotlight h2 {
+header, .spotlight h2 {
     color: #ede6d9;
+}
+
+footer {
+    color: #b39977;
 }
 
 .text {

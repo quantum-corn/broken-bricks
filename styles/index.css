@@ -2,7 +2,7 @@ body {
     padding: 12px 0;
 }
 
-header, .nav, .intro, .highlight, .new, .nav li {
+header, .nav, .intro, .highlight, .new, .nav li, .entry {
     display: flex;
     flex-wrap: wrap;
 }
@@ -71,7 +71,7 @@ h2 {
     border-radius: 6% 6% 0 0/4% 4% 0 0;
 }
 
-.card .description {
+.description {
     padding:4px;
 }
 
@@ -81,4 +81,20 @@ h2 {
 
 footer {
     padding: 12px;
+}
+
+.entry {
+    flex-wrap: nowrap;
+    padding: 12px;
+    border-bottom: 1px solid;
+}
+
+h3 {
+    border-bottom: 1px solid;
+}
+
+.head {
+    padding: 12px;
+    border-right: 1px solid;
+
 }

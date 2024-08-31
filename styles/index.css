@@ -7,7 +7,7 @@ header, .nav, .intro, .highlight, .new, .nav li {
     flex-wrap: wrap;
 }
 
-header, .highlight {
+header {
     justify-content: space-between;
 }
 
@@ -22,7 +22,6 @@ header {
 .nav {
     flex-wrap: wrap;
     gap: 36px;
-    list-style: none;
     padding: 8px 0;
 }
 
@@ -56,21 +55,28 @@ h2 {
 }
 
 .highlight {
+    justify-content: space-evenly;
     gap: 24px;
 }
 
 .card {
-    width: 180px;
-    height: 240px;
+    width: 242px;
+    height: 360px;
     flex: 0 0 auto;
+    border: 1px solid;
+    border-radius: 6%/4%;
+}
+
+.card img {
+    border-radius: 6% 6% 0 0/4% 4% 0 0;
+}
+
+.card .description {
+    padding:4px;
 }
 
 .new {
     flex-direction: row-reverse;
-}
-
-.new li {
-    list-style-type: none;
 }
 
 footer {

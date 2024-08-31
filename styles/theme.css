@@ -10,7 +10,11 @@ header, footer {
     background-color: #735237;
 }
 
-header, header a, .spotlight, .spotlight a, h2 {
+.card {
+    border-color: #b39977;
+}
+
+header, header a, .spotlight, .spotlight a, .spotlight h2 {
     color: #ede6d9;
 }
 
@@ -20,6 +24,10 @@ footer {
 
 .text {
     color: #735237;
+}
+
+.text a {
+    color:#342519;
 }
 
 h2 {

@@ -33,3 +33,7 @@ footer {
 h2 {
     color: #342519;
 }
+
+code {
+    color: darkslategray;
+}

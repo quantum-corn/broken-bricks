@@ -2,7 +2,7 @@ body {
     padding: 12px 0;
 }
 
-header, .nav, .intro, .highlight, .new, .nav li, .entry {
+header, .nav, .intro, .highlight, .new, .nav li, .entry, blockquote {
     display: flex;
     flex-wrap: wrap;
 }
@@ -94,7 +94,27 @@ h3 {
 }
 
 .head {
+    width: 270px;
+    flex: 0 0 auto;
     padding: 12px;
     border-right: 1px solid;
 
+}
+
+.content {
+    padding: 72px;
+    font-size: x-large;
+}
+
+.content h3 {
+    border: 0;
+    margin-top: 36px;
+}
+
+blockquote {
+    padding: 24px;
+    margin: 18px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    justify-content: center;
 }

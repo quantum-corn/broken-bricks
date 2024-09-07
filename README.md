@@ -1,3 +1,3 @@
 # Thought Palette
 
-This is my blog site. I am building this as I learn. Live at https://thoughtpalette.vercel.app
+This is my blog site. Live at https://thethoughtpalette.vercel.app

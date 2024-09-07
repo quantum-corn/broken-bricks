@@ -103,7 +103,10 @@ h3 {
 
 .content {
     padding: 72px;
-    font-size: x-large;
+    font-size: larger;
+    max-width: 70rem;
+    margin: auto;
+    border-width: 0px 5px;
 }
 
 .content h3 {
@@ -117,4 +120,33 @@ blockquote {
     border-top: 1px solid;
     border-bottom: 1px solid;
     justify-content: center;
+}
+
+.author {
+    border: 1px solid;
+    padding: 20px;
+    border-radius: 5%/10%;
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.basic {
+    padding: 10px;
+    border-right: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bio {
+    padding: 25px;
+}
+
+.author img {
+    border-radius: 50%;
+}
+
+.author h2 {
+    margin: auto;
 }
